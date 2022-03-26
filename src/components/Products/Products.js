@@ -27,7 +27,7 @@ const Products = () => {
   }, []);
 
   return (
-    <div>
+    <div className="flex flex-col lg:flex-row-reverse mt-5">
       <div>
         <Cart
           cart={cart}
@@ -36,7 +36,7 @@ const Products = () => {
           selectedProduct={selectedProduct}
         />
       </div>
-      <div className="grid grid-cols-1 lg:grid-cols-3">
+      <div className="grid grid-cols-1 lg:grid-cols-3 gap-12 mx-auto">
         {products.map((product) => (
           <Product
             key={product.id}

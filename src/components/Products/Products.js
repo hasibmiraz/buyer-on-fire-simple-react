@@ -7,7 +7,7 @@ const Products = () => {
   const [cart, setCart] = useState([]);
   const [selectedProduct, setSelectedProduct] = useState([]);
 
-  const randomNum = Math.floor(Math.random() * cart.length);
+  const randomNum = Math.ceil(Math.random() * cart.length - 1);
   const handleAddToCart = (product) => {
     setCart([...cart, product]);
   };

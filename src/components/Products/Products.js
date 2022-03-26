@@ -5,6 +5,9 @@ import Product from '../Product/Product';
 const Products = () => {
   const [products, setProducts] = useState([]);
   const [cart, setCart] = useState([]);
+  const [selectedProduct, setSelectedProduct] = useState([]);
+
+  const randomNum = Math.floor(Math.random() * cart.length);
   const handleAddToCart = (product) => {
     setCart([...cart, product]);
   };
@@ -13,15 +16,27 @@ const Products = () => {
     setCart([]);
   };
 
+  const selectRandomProduct = () => {
+    console.log(randomNum);
+    setSelectedProduct(cart[randomNum]);
+    console.log(selectedProduct);
+  };
+
   useEffect(() => {
     fetch('products.json')
       .then((res) => res.json())
       .then((data) => setProducts(data));
   }, []);
+
   return (
     <div>
       <div>
-        <Cart cart={cart} resetCart={resetCart} />
+        <Cart
+          cart={cart}
+          resetCart={resetCart}
+          selectRandomProduct={selectRandomProduct}
+          selectedProduct={selectedProduct}
+        />
       </div>
       <div className="grid grid-cols-1 lg:grid-cols-3">
         {products.map((product) => (

@@ -1,12 +1,12 @@
 import {
+  faArrowCircleDown,
   faArrowCircleRight,
   faHand,
   faTrashCan,
 } from '@fortawesome/free-solid-svg-icons';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
-import React from 'react';
 
-const Cart = ({ cart, resetCart }) => {
+const Cart = ({ cart, resetCart, selectRandomProduct, selectedProduct }) => {
   return (
     <div className="mx-auto mt-4">
       <div className="flex items-center justify-center bg-white">
@@ -16,10 +16,20 @@ const Cart = ({ cart, resetCart }) => {
               <FontAwesomeIcon icon={faArrowCircleRight} /> {pd.title}
             </p>
           ))}
-
-          <button className="mt-10 w-full py-3 rounded-xl border border-purple-600 text-purple-600 hover:bg-purple-600 hover:text-gray-50">
+          <button
+            onClick={selectRandomProduct}
+            className="mt-10 w-full py-3 rounded-xl border border-purple-600 text-purple-600 hover:bg-purple-600 hover:text-gray-50"
+          >
             Choose 1 For me <FontAwesomeIcon icon={faHand} />
           </button>
+          <p className="text-lg text-gray-700 font-semibold mt-3">
+            Your selected product is:{' '}
+            <FontAwesomeIcon icon={faArrowCircleDown} />{' '}
+            <span className="text-red-400">
+              {selectedProduct ? selectedProduct.title : ''}
+            </span>
+          </p>
+
           <button
             onClick={resetCart}
             className="mt-5 w-full py-3 rounded-xl border border-red-600 text-red-600 hover:bg-red-600 hover:text-gray-50"

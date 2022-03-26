@@ -9,6 +9,10 @@ const Products = () => {
     setCart([...cart, product]);
   };
 
+  const resetCart = () => {
+    setCart([]);
+  };
+
   useEffect(() => {
     fetch('products.json')
       .then((res) => res.json())
@@ -17,7 +21,7 @@ const Products = () => {
   return (
     <div>
       <div>
-        <Cart cart={cart} />
+        <Cart cart={cart} resetCart={resetCart} />
       </div>
       <div className="grid grid-cols-1 lg:grid-cols-3">
         {products.map((product) => (

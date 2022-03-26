@@ -6,7 +6,7 @@ import {
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import React from 'react';
 
-const Cart = ({ cart }) => {
+const Cart = ({ cart, resetCart }) => {
   return (
     <div className="mx-auto mt-4">
       <div className="flex items-center justify-center bg-white">
@@ -16,11 +16,14 @@ const Cart = ({ cart }) => {
               <FontAwesomeIcon icon={faArrowCircleRight} /> {pd.title}
             </p>
           ))}
-          <p className="text-xl text-gray-700 font-semibold mt-1"></p>
+
           <button className="mt-10 w-full py-3 rounded-xl border border-purple-600 text-purple-600 hover:bg-purple-600 hover:text-gray-50">
             Choose 1 For me <FontAwesomeIcon icon={faHand} />
           </button>
-          <button className="mt-5 w-full py-3 rounded-xl border border-red-600 text-red-600 hover:bg-red-600 hover:text-gray-50">
+          <button
+            onClick={resetCart}
+            className="mt-5 w-full py-3 rounded-xl border border-red-600 text-red-600 hover:bg-red-600 hover:text-gray-50"
+          >
             Select Again <FontAwesomeIcon icon={faTrashCan} />
           </button>
         </div>

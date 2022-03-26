@@ -17,9 +17,7 @@ const Products = () => {
   };
 
   const selectRandomProduct = () => {
-    console.log(randomNum);
     setSelectedProduct(cart[randomNum]);
-    console.log(selectedProduct);
   };
 
   useEffect(() => {

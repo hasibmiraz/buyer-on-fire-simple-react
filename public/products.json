@@ -1,0 +1,56 @@
+[
+  {
+    "id": 1,
+    "title": "Transcend 8 GB Ram",
+    "price": 109.95,
+    "image": "https://fakestoreapi.com/img/81fPKd-2AYL._AC_SL1500_.jpg"
+  },
+  {
+    "id": 2,
+    "title": "Gigabyte MotherBoard",
+    "price": 695,
+    "image": "https://fakestoreapi.com/img/71pWzhdJNwL._AC_UL640_QL65_ML3_.jpg"
+  },
+  {
+    "id": 3,
+    "title": "Intel Core I5",
+    "price": 168,
+    "image": "https://fakestoreapi.com/img/61sbMiUnoGL._AC_UL640_QL65_ML3_.jpg"
+  },
+  {
+    "id": 4,
+    "title": "WD 2TB External Hard Drive",
+    "price": 64,
+    "image": "https://fakestoreapi.com/img/61IBBVJvSDL._AC_SY879_.jpg"
+  },
+  {
+    "id": 5,
+    "title": "SanDisk 1TB SSD PLUS",
+    "price": 109,
+    "image": "https://fakestoreapi.com/img/61U7T1koQqL._AC_SX679_.jpg"
+  },
+  {
+    "id": 6,
+    "title": "Silicon Power 256GB SSD",
+    "price": 109,
+    "image": "https://fakestoreapi.com/img/71kWymZ+c+L._AC_SX679_.jpg"
+  },
+  {
+    "id": 7,
+    "title": "WD 4TB Hard Drive",
+    "price": 114,
+    "image": "https://fakestoreapi.com/img/61mtL65D4cL._AC_SX679_.jpg"
+  },
+  {
+    "id": 8,
+    "title": "Acer SB220Q bi 21.5 Monitor",
+    "price": 599,
+    "image": "https://fakestoreapi.com/img/81QpkIctqPL._AC_SX679_.jpg"
+  },
+  {
+    "id": 9,
+    "title": "Samsung 49-Inch Monitor",
+    "price": 999.99,
+    "image": "https://fakestoreapi.com/img/81Zt42ioCgL._AC_SX679_.jpg"
+  }
+]
